@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6 text-center">
+    <h2>Login with Pinterest</h2>
+    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+    {% if error %}
+      <div class="alert alert-danger mt-2">{{ error }}</div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
